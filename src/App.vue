@@ -4,7 +4,7 @@
     <div id="main-content">
       <options></options>
       <deets></deets>
-      <viz></viz>
+      <viz v-bind:indata="rawData"></viz>
     </div>
   </div>
 </template>
@@ -22,6 +22,17 @@ export default {
     Options,
     Deets,
     Viz,
+  },
+  data() {
+    return {
+      rawData: [
+        25, 15, 35, 5, 7,
+        29, 31, 40, 26, 16,
+        4, 33, 31, 27, 45,
+        49, 11, 17, 19, 23,
+        37, 43, 2, 1, 15,
+      ],
+    };
   },
 };
 </script>
@@ -44,12 +55,14 @@ body {
   padding: 0;
 }
 
+h1, h2 {
+  text-align: center;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
   display: flex;
   flex-direction: column;
   height: 100vh;

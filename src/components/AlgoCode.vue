@@ -1,6 +1,6 @@
 <template>
   <div class="algo-code">
-    <div>{{ msg }}</div>
+    <pre><code>{{ msg }}</code></pre>
   </div>
 </template>
 
@@ -9,7 +9,12 @@ export default {
   name: 'algo-code',
   data() {
     return {
-      msg: 'I am Code Lorem ..!',
+      msg:
+`CODE (or PSEUDOCODE) goes HERE
+   LINE2
+   LINE3
+   ...
+`,
     };
   },
 };
@@ -19,9 +24,11 @@ export default {
 <style scoped>
 .algo-code {
   flex-grow: 1;
+  padding: 10px;
 }
 
-h1, h2 {
-  font-weight: normal;
+code {
+  text-align: left;
 }
+
 </style>
