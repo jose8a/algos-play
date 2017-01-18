@@ -11,7 +11,8 @@
 </template>
 
 <script>
-import sort from '../lib/select-sort';
+/* import sorter from '../lib/select-sort'; */
+import sorter from '../lib/insert-sort';
 
 export default {
   name: 'viz',
@@ -23,7 +24,7 @@ export default {
     };
   },
   created() {
-    this.sorter = sort();
+    this.sorter = sorter();
     this.sorter.init(this.indata);
   },
   methods: {
